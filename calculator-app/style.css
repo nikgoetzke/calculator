@@ -1,0 +1,155 @@
+:root {
+
+    /* Colors: */
+    --utility-button: #D2D2D2;
+    --dark-mode: #222222;
+    --equal-button: #4F79DC;
+    --primary-display: #ECECEC;
+    --primary-background: #FFFFFF;
+    --primary-operators: #B9D6E3;
+    --primary-numbers: #707070;
+
+    /* Font/text values */
+    --font-family-lato: Lato;
+    --font-style-normal: normal;
+    --font-weight-normal: normal;
+    --font-size-24: 24px;
+    --font-size-34: 34px;
+    --font-size-60: 60px;
+    --character-spacing-0: 0px;
+    --line-spacing-29: 29px;
+    --line-spacing-41: 41px;
+    --line-spacing-72: 72px;
+}
+
+/* Character Styles */
+.character-style-1 {
+    font-family: var(--font-family-lato);
+    font-style: var(--font-style-normal);
+    font-weight: var(--font-weight-normal);
+    font-size: var(--font-size-24);
+    line-height: var(--line-spacing-29);
+    letter-spacing: var(--character-spacing-0);
+    color: var(--color-707070);
+}
+
+.character-style-2 {
+    font-family: var(--font-family-lato);
+    font-style: var(--font-style-normal);
+    font-weight: var(--font-weight-normal);
+    font-size: var(--font-size-60);
+    line-height: var(--line-spacing-72);
+    letter-spacing: var(--character-spacing-0);
+    color: var(--color-707070);
+}
+
+.character-style-3 {
+    font-family: var(--font-family-lato);
+    font-style: var(--font-style-normal);
+    font-weight: var(--font-weight-normal);
+    font-size: var(--font-size-34);
+    line-height: var(--line-spacing-41);
+    letter-spacing: var(--character-spacing-0);
+    color: var(--color-707070);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/img/background.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.calc-body {
+    width: 364px;
+    height: 666px;
+    border-radius: 5px;
+    background-color: var(--primary-background);
+}
+
+.calc-header {
+    width: 364px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-btn {
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    border: none;
+    padding: 5px 15px;
+    font-size: 16px
+}
+
+.toggle {
+    margin: 16px 24px;
+}
+
+.calc-display {
+    width: 364px;
+    height: 170px;
+    background-color: var(--primary-display);
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.calc-display-result {
+    padding: 15px;
+    font-family: var(--font-family-lato);
+    font-size: var(--font-size-60);
+}
+
+.calc-numpad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
+    padding: 24px;
+}
+
+.calc-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: var(--primary-background);
+    font-size: var(--font-size-34);
+}
+
+
+
+.util-btn {
+    background-color: var(--utility-button);
+    color: var(--primary-background);
+}
+
+.operator-btn {
+    background-color: var(--primary-operators);
+    color: var(--primary-background);
+}
+
+.equal-btn {
+    background-color: var(--equal-button);
+    color: var(--primary-background);
+}
+
+.active+div {
+    display: none;
+}
